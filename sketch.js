@@ -42,8 +42,14 @@ function draw() {
 
     keyPressed();
 
-    if(jerry.x+200 > tom.x){
-        tom.x=jerry.x+200;
+    /* if(jerry.x+200 > tom.x){
+        tom.velocityX=0;
+        tom.changeAnimation("calm",tomCalm);
+        jerry.changeImage("jerryIm",jerryImage)
+    }*/
+
+    if((tom.x+jerry.x)<=(tom.width+jerry.width)/2){
+        tom.velocityX=0;
         tom.changeAnimation("calm",tomCalm);
         jerry.changeImage("jerryIm",jerryImage)
     }
